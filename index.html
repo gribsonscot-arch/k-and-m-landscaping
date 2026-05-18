@@ -22,12 +22,14 @@
         <svg class="logo-mark" width="148" height="44" viewBox="0 0 148 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <!-- K -->
           <path d="M4 4H10V19.5L22 4H30L17.5 20.5L31 40H23L13 24.5L10 28V40H4V4Z" fill="currentColor"/>
-          <!-- Left leaf -->
-          <path d="M52 40C52 40 42 30 42 20C42 12 46 7 52 6C52 6 52 6 52 6C55 7 58 10 58 16C58 24 52 40 52 40Z" fill="#6B8C58"/>
-          <path d="M52 40C52 32 50 22 50 16" stroke="#4A6840" stroke-width="0.8" fill="none" opacity="0.6"/>
-          <!-- Right leaf -->
-          <path d="M68 40C68 40 78 30 78 20C78 12 74 7 68 6C65 7 62 10 62 16C62 24 68 40 68 40Z" fill="#8AAF6A"/>
-          <path d="M68 40C68 32 70 22 70 16" stroke="#6A8A4A" stroke-width="0.8" fill="none" opacity="0.6"/>
+          <!-- Stem -->
+          <line x1="59" y1="40" x2="59" y2="24" stroke="#4A6840" stroke-width="1.8" stroke-linecap="round"/>
+          <!-- Left leaf — branches from stem, points upper-left -->
+          <path d="M59 26 C54 22 46 12 43 10 C45 16 53 24 59 26Z" fill="#6B8C58"/>
+          <path d="M59 26 C53 19 47 12 44 11" stroke="#3D5A30" stroke-width="0.7" fill="none" opacity="0.55"/>
+          <!-- Right leaf — branches from stem, points upper-right -->
+          <path d="M59 26 C64 22 72 12 75 10 C73 16 65 24 59 26Z" fill="#8AAF6A"/>
+          <path d="M59 26 C65 19 71 12 74 11" stroke="#5A7A40" stroke-width="0.7" fill="none" opacity="0.55"/>
           <!-- M -->
           <path d="M86 4H93L103 22L113 4H120V40H114V14.5L103 34H103L92 14.5V40H86V4Z" fill="currentColor"/>
         </svg>
@@ -236,27 +238,66 @@
       </div>
     </section>
 
-    <!-- Contact CTA -->
+    <!-- Contact / Quote Form -->
     <section id="contact" aria-labelledby="contact-heading">
       <div class="container">
-        <div class="contact-inner">
-          <div class="contact-leaves" aria-hidden="true">
-            <svg viewBox="0 0 60 100" fill="none">
-              <path d="M30 98C30 98 4 72 4 46C4 24 14 6 30 3C46 6 56 24 56 46C56 72 30 98 30 98Z" fill="currentColor"/>
-              <path d="M30 98V3" stroke="rgba(255,255,255,0.2)" stroke-width="1" fill="none"/>
-            </svg>
+        <div class="contact-layout">
+
+          <div class="contact-intro reveal-up">
+            <span class="section-label">Get in Touch</span>
+            <h2 id="contact-heading" class="reveal-up" style="--d:0.1s">Request a<br><em>Free Estimate</em></h2>
+            <p class="reveal-up" style="--d:0.2s">Tell us about your property and we'll get back to you with a no-obligation quote.</p>
+            <a href="tel:4035550182" class="contact-phone-link reveal-up" style="--d:0.3s">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 .01h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+              </svg>
+              (403) 555-0182
+            </a>
           </div>
-          <span class="section-label reveal-up">Get in Touch</span>
-          <h2 id="contact-heading" class="reveal-up" style="--d:0.1s">
-            Ready for a<br><em>Free Estimate?</em>
-          </h2>
-          <p class="reveal-up" style="--d:0.2s">Call us today and we'll assess your property and provide a no-obligation quote.</p>
-          <a href="tel:4035550182" class="btn btn-forest btn-large reveal-up" style="--d:0.3s">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 .01h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
-            </svg>
-            (403) 555-0182
-          </a>
+
+          <form class="quote-form reveal-up" style="--d:0.15s" novalidate>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="first-name">First Name</label>
+                <input type="text" id="first-name" name="first_name" placeholder="Kevin" autocomplete="given-name">
+              </div>
+              <div class="form-field">
+                <label for="last-name">Last Name</label>
+                <input type="text" id="last-name" name="last_name" placeholder="Mitchell" autocomplete="family-name">
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" placeholder="(403) 000-0000" autocomplete="tel">
+            </div>
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="you@email.com" autocomplete="email">
+            </div>
+            <div class="form-field">
+              <label for="service">Service Needed</label>
+              <div class="select-wrap">
+                <select id="service" name="service">
+                  <option value="" disabled selected>Select a service...</option>
+                  <option value="spring-cleanup">Spring Cleanup</option>
+                  <option value="lawn-maintenance">Lawn Maintenance</option>
+                  <option value="hedge-trimming">Hedge Trimming</option>
+                  <option value="fall-cleanup">Fall Cleanup</option>
+                  <option value="snow-removal">Snow Removal</option>
+                  <option value="salting-sanding">Salting &amp; Sanding</option>
+                </select>
+                <svg class="select-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                  <polyline points="6 9 12 15 18 9"/>
+                </svg>
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="details">About Your Property</label>
+              <textarea id="details" name="details" rows="4" placeholder="Property size, specific requests, neighbourhood, preferred start date..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-forest form-submit">Send My Request</button>
+          </form>
+
         </div>
       </div>
     </section>
@@ -270,8 +311,9 @@
         <a href="#" class="footer-logo-link" aria-label="K and M Landscaping — back to top">
           <svg class="footer-logo-mark" width="120" height="36" viewBox="0 0 148 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <path d="M4 4H10V19.5L22 4H30L17.5 20.5L31 40H23L13 24.5L10 28V40H4V4Z" fill="currentColor"/>
-            <path d="M52 40C52 40 42 30 42 20C42 12 46 7 52 6C55 7 58 10 58 16C58 24 52 40 52 40Z" fill="#6B8C58"/>
-            <path d="M68 40C68 40 78 30 78 20C78 12 74 7 68 6C65 7 62 10 62 16C62 24 68 40 68 40Z" fill="#8AAF6A"/>
+            <line x1="59" y1="40" x2="59" y2="24" stroke="#4A6840" stroke-width="1.8" stroke-linecap="round"/>
+            <path d="M59 26 C54 22 46 12 43 10 C45 16 53 24 59 26Z" fill="#6B8C58"/>
+            <path d="M59 26 C64 22 72 12 75 10 C73 16 65 24 59 26Z" fill="#8AAF6A"/>
             <path d="M86 4H93L103 22L113 4H120V40H114V14.5L103 34H103L92 14.5V40H86V4Z" fill="currentColor"/>
           </svg>
           <span class="footer-logo-sub">Landscaping</span>
